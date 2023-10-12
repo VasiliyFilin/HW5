@@ -5,14 +5,11 @@ public class Main {
 
         System.out.println("Задача 1:");
         int clientOS = 1;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println();
 
@@ -23,21 +20,20 @@ public class Main {
         System.out.println("Задача 2:");
         var clientDeviceYear = 2015;
         if (clientDeviceYear < 2015) {
-            clientOS += 10;
-        }
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            case 0+10:
+            if (clientOS == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                break;
-            case 1+10:
+            }
+            else if (clientOS == 1) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                break;
+            }
+        }
+        else if (clientDeviceYear >= 2015) {
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            }
+            else if (clientOS == 1) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
         }
         System.out.println();
 
